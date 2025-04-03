@@ -3,9 +3,9 @@
 #include <stdbool.h>
 
 // Размеры окна/глубина рекурсии
-#define WINDOW_WIDTH  1000
-#define WINDOW_HEIGHT 750
-#define MAX_DEPTH 3
+#define WINDOW_WIDTH  729
+#define WINDOW_HEIGHT 729
+#define MAX_DEPTH 6
 
 // Рекурсивная функция рисования ковра Серпинского
 void drawCarpet(SDL_Renderer* renderer, int x, int y, int size, int depth);
@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
 
     // Создание окна
     SDL_Window* window = SDL_CreateWindow(
-        "Ковёр Серпинского (SDL2)",
+        "Sierpinski carpet",
         SDL_WINDOWPOS_CENTERED,
         SDL_WINDOWPOS_CENTERED,
         WINDOW_WIDTH,
