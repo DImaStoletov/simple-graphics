@@ -19,3 +19,22 @@ void drawCarpet(SDL_Renderer* renderer, int x, int y, int size, int depth) {
         }
     }
 }
+
+
+
+void draw(SDL_Renderer* renderer) {
+    // Очистка экрана
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    SDL_RenderClear(renderer);
+
+    // Рисуем кнопки
+    for (int i = 0; i <= MAX_DEPTH; i++) {
+        drawButton(renderer, i, i == current_depth);
+    }
+
+    // Рисуем ковер Серпинского
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    drawCarpet(renderer, 0, 50, WINDOW_WIDTH, current_depth);
+
+    SDL_RenderPresent(renderer);
+}
